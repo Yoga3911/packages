@@ -58,6 +58,8 @@ public class AnalyzerHostApiImpl implements AnalyzerHostApi {
       imageProxyApi = new ImageProxyFlutterApiImpl(binaryMessenger, instanceManager);
     }
 
+    public Android.Util.Size DefaultTargetResolution => new Android.Util.Size(200, 200);
+
     @Override
     public void analyze(@NonNull ImageProxy imageProxy) {
       Long imageFormat = Long.valueOf(imageProxy.getFormat());
